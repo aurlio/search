@@ -1,0 +1,59 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Advanced Search</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    
+    <script src="popup.js"></script>
+  </head>
+  <body>
+	<div id="container">
+		<div id="search-box">
+			<div display="inline-block">
+				<input name="key" id="search-key" type="text"></input>
+				<span>current/total</span>
+			</div>
+			<button name="up" id="up-search" >up</button>
+			<button name="down" id="down-search">down</button>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<span>case sensitive</span>
+					<span>
+						<input type="checkbox" name="casesensitive" id="case-sensitive"></input>
+					</span>
+				</li>
+				<li>
+					<span>words</span>
+					<span>
+						<input type="checkbox" name="words" id="words"></input>
+					</span>
+				</li>
+			</ul>
+		</div>
+		
+	
+	</div>
+    
+  </body>
+</html>
+
